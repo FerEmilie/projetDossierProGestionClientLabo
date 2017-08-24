@@ -104,4 +104,17 @@ class ClientController extends Controller
         return redirect('/');
         }
 
+        public function search(Request $request)
+          {
+
+            $input = $request->all();
+            $shift = array_shift($input);
+            $filtre = array_filter($input);
+
+            $clients = Client::where($filtre)->get();
+
+            return view('clients.liste', ['clients' => $clients]);
+
+          }
+
 }

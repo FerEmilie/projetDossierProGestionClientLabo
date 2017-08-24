@@ -22,3 +22,28 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Client::class, function (Faker\Generator $faker) {
+
+    return [
+        'name' => $faker->company,
+        'responsable' => $faker->name,
+        'adress' => $faker->address,
+        'phone' => mt_rand(),
+        'nbTest' => rand(1,500),
+    ];
+});
+
+$factory->define(App\Materiel::class, function (Faker\Generator $faker) {
+
+    return [
+        'departement' => rand(1,90),
+        'logisticsChildAccountNumber' => mt_rand(),
+        'CDV' => $faker->name,
+        'IA' => $faker->name,
+        'STC' => $faker->name,
+        'account' => $faker->title,
+        'installedProductID' => rand(1,500),
+        'logiciel' => $faker->title,
+    ];
+});

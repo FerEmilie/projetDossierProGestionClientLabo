@@ -10,49 +10,17 @@
   <div class="col-lg-2 jumbotron">
     <form id="form" class="" action="/search" method="post">
       <fieldset>
-          <legend>Recherche</legend>
+          <legend>Recherche clients</legend>
             {{ csrf_field() }}
               <div class="form-group">
             <label for="id">Par laboratoire: </label>
-            <select class="form-control" name="id" id="id"></br>
-               @foreach($clients as $client)
-                   <option value="{{ $client->id }}">{{ $client->name }}</option>
-               @endforeach
-            </select>
+            <input autofocus="autofocus" class="form-control" type="text" name="name" id="name" />
           </div>
           <div class="form-group">
           <label for="nbTest">Par Nombre de tests: </label>
-            <select class="form-control" name="id" id="id"></br>
-               @foreach($clients as $client)
-                   <option value="{{ $client->id }}">{{ $client->nbTest }}</option>
-               @endforeach
-            </select>
+          <input class="form-control" type="number" name="nbTest" id="nbTest" />
           </div>
-          <div class="form-group">
-            <label for="logiciel">Par logiciel: </label>
-              <select class="form-control" name="id" id="id"></br>
-                 @foreach($materiels as $materiel)
-                     <option value="{{ $materiel->id }}">{{ $materiel->logiciel }}</option>
-                 @endforeach
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="ia">Par IA: </label>
-                <select class="form-control" name="id" id="id"></br>
-                   @foreach($materiels as $materiel)
-                       <option value="{{ $materiel->id }}">{{ $materiel->IA }}</option>
-                   @endforeach
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="departement">Par Departement: </label>
-                  <select class="form-control" name="id" id="id"></br>
-                     @foreach($materiels as $materiel)
-                         <option value="{{ $materiel->id }}">{{ $materiel->departement }}</option>
-                     @endforeach
-                  </select>
-               </div>
-          <button name="commit" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-check"></span> Valider</button>
+          <button name="commit" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-check"></span> Valider</button></br></br>
       </fieldset>
     </form>
   </div>
