@@ -25,19 +25,20 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="/img/index.jpg" alt="labo">
-      <div class="carousel-caption">
-        <h3>Nouveauté en labo</h3>
+      <div class="carousel-caption" style="background-color: rgba(184, 184, 184, 0.5);">
+          <h3>Nouvelle recherche</h3>
+          <a href="#">Read More...</a>
       </div>
     </div>
     <div class="item">
       <img src="/img/bio.jpg" alt="bio">
-      <div class="carousel-caption">
+      <div class="carousel-caption" style="background-color: rgba(184, 184, 184, 0.5);">
         <h3>Nouveauté en labo</h3>
       </div>
     </div>
     <div class="item">
       <img src="/img/ih.jpg" alt="ih">
-      <div class="carousel-caption">
+      <div class="carousel-caption" style="background-color: rgba(184, 184, 184, 0.5);">
         <h3>Nouveauté en labo</h3>
       </div>
     </div>
@@ -55,4 +56,5 @@
 </div>
 
 </div>
+
 @endsection

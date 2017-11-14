@@ -50,7 +50,7 @@
 
       @foreach($clients as $client)
       <tr>
-          <td>{{ $client->id }}</td>
+          <td>{{ $i++ }}</td>
           <td>{{ $client->name }}</td>
           <td>{{ $client->responsable }}</td>
           <td>{{ $client->adress }}</td>

@@ -18,19 +18,21 @@ class ClientController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
- }
+    }
 
     public function liste()
   {
       $clients = Client::all();
       $materiels = Materiel::all();
-      return view('clients.liste', ['clients' => $clients, 'materiels' => $materiels]);
+      $i = 1;
+      return view('clients.liste', ['clients' => $clients, 'materiels' => $materiels, 'i' => $i]);
   }
 
     public function show($id)
     {
       $client = Client::find($id);
-      return view('clients.show', ['client' => $client]);
+      $i = 1;
+      return view('clients.show', ['client' => $client, 'i' => $i]);
     }
 
     public function create()
@@ -107,13 +109,13 @@ class ClientController extends Controller
         public function search(Request $request)
           {
 
+            $i = 1;
             $input = $request->all();
             $shift = array_shift($input);
             $filtre = array_filter($input);
-
             $clients = Client::where($filtre)->get();
 
-            return view('clients.liste', ['clients' => $clients]);
+            return view('clients.liste', ['clients' => $clients, 'i' => $i]);
 
           }
 

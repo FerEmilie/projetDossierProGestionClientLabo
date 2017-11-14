@@ -18,6 +18,7 @@
           <table class="table table-striped table-condensed">
         <thead>
           <tr>
+            <th>#</th>
             <th>departement</th>
             <th>logisticsChildAccountNumber</th>
             <th>CDV</th>
@@ -36,6 +37,7 @@
 
        @foreach ($client->materiels as $materiel)
           <tr>
+              <td>{{$i++}}</td>
               <td>{{ $materiel->departement }}</td>
               <td>{{ $materiel->logisticsChildAccountNumber }}</td>
               <td>{{ $materiel->CDV }}</td>
