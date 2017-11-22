@@ -86,7 +86,7 @@
         <div class="logofooter">A propos</div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
         <p><i class="fa fa-map-pin"></i>Narbonne</p>
-        <p><i class="fa fa-phone"></i>06-31-50-14-90</p>
+        <p><i class="fa fa-phone"></i>06-**-**-**-**</p>
         <p><i class="fa fa-envelope"></i> E-mail : fernandezemilie@ymail.com</p>
       </div>
       <div class="col-md-2 col-sm-6 paddingtop-bottom">
