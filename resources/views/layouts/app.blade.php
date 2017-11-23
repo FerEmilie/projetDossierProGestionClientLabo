@@ -16,9 +16,15 @@
 </head>
 <body>
     <div class="container">
-          <nav class="navbar navbar-inverse navbar-fixed-top">
+          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <div class="container-fluid">
                   <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
                     <a href="/" class="navbar-brand">GESTIONNAIRE</a>
                   </div>
 
@@ -34,7 +40,7 @@
                         @if (Auth::guest())
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+
                         </ul>
                         @else
                          <ul class="nav navbar-nav">
@@ -43,7 +49,9 @@
                           <li> <a href="/liste/materiel">Liste des matériels</a> </li>
                           <li> <a href="/create">Nouveau client</a> </li>
                           <li> <a href="/materiel">Add matériel/client</a> </li>
-
+                          @if (Auth::user()->role_id == 1)
+                            <li><a href="/admin">Admin</a></li>
+                          @endif
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -71,7 +79,6 @@
                               </div>
                             </form>
                         @endif
-
                 </div>
             </div>
         </nav>
@@ -79,15 +86,13 @@
         @yield('content')
     </div>
 
-    <footer>
+<footer>
   <div class="container">
     <div class="row">
       <div class="col-md-4 col-sm-6 footerleft ">
         <div class="logofooter">A propos</div>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
         <p><i class="fa fa-map-pin"></i>Narbonne</p>
-        <p><i class="fa fa-phone"></i>06-31-50-14-90</p>
-        <p><i class="fa fa-envelope"></i> E-mail : fernandezemilie@ymail.com</p>
       </div>
       <div class="col-md-2 col-sm-6 paddingtop-bottom">
         <h6 class="heading7">GENERAL</h6>
@@ -99,7 +104,6 @@
       <div class="col-md-3 col-sm-6 paddingtop-bottom">
         <h6 class="heading7">Derniers posts</h6>
         <div class="post">
-          <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
           <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
           <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
         </div>
