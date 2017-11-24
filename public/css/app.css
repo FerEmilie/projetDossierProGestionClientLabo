@@ -8422,6 +8422,10 @@ footer {
   -o-transform: scale(1.1);
 }
 
+.print {
+  margin: 10px;
+}
+
 .icon-ul {
   list-style-type: none !important;
   margin: 0px;

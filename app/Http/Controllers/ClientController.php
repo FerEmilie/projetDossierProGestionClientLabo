@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use App\Client;
 use App\Materiel;
+use App\User;
+use Excel;
+
 
 class ClientController extends Controller
 {
@@ -117,6 +120,25 @@ class ClientController extends Controller
 
             return view('clients.liste', ['clients' => $clients, 'i' => $i]);
 
+          }
+
+          public function exportExcel(){
+            $clients = Client::select('name', 'responsable', 'adress', 'phone', 'nbTest')->get();
+            $clientsArray = [];
+            $clientsArray[] = ['name', 'responsable', 'adress', 'phone', 'nbTest'];
+            foreach ($clients as $client) {
+                 $clientsArray[] = $client->toArray();
+             }
+
+             Excel::create('clients', function($excel) use ($clientsArray) {
+                 $excel->setTitle('Clients');
+                 $excel->setDescription('clients file');
+
+                 $excel->sheet('sheet1', function($sheet) use ($clientsArray) {
+                     $sheet->fromArray($clientsArray, null, 'A1', false, false);
+                 });
+
+             })->export('xls');
           }
 
 }

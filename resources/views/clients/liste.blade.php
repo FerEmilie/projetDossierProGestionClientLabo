@@ -63,6 +63,10 @@
       @endforeach
     </tbody>
  </table>
+ <div class="print">
+<input class="btn btn-info" type="button" value="Export Excel" onclick="javascript:location.href='/export'">
+ </div>
+
  </div>
 
   <aside class="media col-lg-offset-2 col-lg-8">

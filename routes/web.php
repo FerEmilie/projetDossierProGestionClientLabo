@@ -22,10 +22,13 @@ Route::get('/delete/{id}', 'ClientController@delete');
 Route::get('/materiel', 'ClientController@ajoutmateriel');
 Route::post('/savemateriel', 'ClientController@savemateriel');
 Route::post('/search', 'ClientController@search');
+Route::get('/export', 'ClientController@exportExcel');
 
 Route::get('/liste/materiel', 'MaterielController@liste');
 Route::get('/show/materiel/{id}', 'MaterielController@show');
 Route::post('/search/materiel', 'MaterielController@search');
+
+Route::get('/stats', 'StatController@index');
 
 Auth::routes();
 
