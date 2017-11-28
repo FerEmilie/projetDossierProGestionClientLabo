@@ -14,11 +14,19 @@ class StatController extends Controller
 {
   public function index()
 {
-    return view('stats.index');
+  $clients = Client::select('name','y')->get();
+   $clients = json_encode($clients, JSON_NUMERIC_CHECK);
+  return view('stats.index', ['clients' => $clients]);
 }
 
 public function __construct()
 {
     $this->middleware('auth');
 }
+public function jsonStat(){
+  $clients = Client::select('name','y')->get();
+   $clients = json_encode($clients, JSON_NUMERIC_CHECK);
+  return view('stats.index', ['clients' => $clients]);
+}
+
 }

@@ -64,7 +64,7 @@
     </tbody>
  </table>
  <div class="print">
-<input class="btn btn-info" type="button" value="Export Excel" onclick="javascript:location.href='/export'">
+<input class="btn btn-success" type="button" value="Export Excel" onclick="javascript:location.href='/export'">
  </div>
 
  </div>

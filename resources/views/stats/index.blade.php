@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+    <div id="containerStat">
 
-@endsection
+    </div>
+    <div class="datahide">
+      {{$clients}}
+    </div>
+
+  @endsection

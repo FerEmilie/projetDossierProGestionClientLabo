@@ -72,6 +72,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                  @if (Auth::user()->role_id == 1)
+                                    <li><a href="/admin">Admin</a></li>
+                                  @endif
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -83,9 +86,6 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
-                                    @if (Auth::user()->role_id == 1)
-                                      <li><a href="/admin">Admin</a></li>
-                                    @endif
                                 </ul>
                             </li>
                             </ul>
@@ -153,6 +153,8 @@
 </div>
 
     <!-- Scripts -->
+    <script src="/js/highcharts.js" type="text/javascript"></script>
     <script src="/js/app.js" type="text/javascript"></script>
+
 </body>
 </html>
