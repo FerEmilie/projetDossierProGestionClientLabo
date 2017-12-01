@@ -14,16 +14,16 @@
          <input autofocus="autofocus" required="required" class="form-control" type="text" name="name" id="name" /></br></br>
 
          <label for="responsable">Nom du responsable: </label>
-         <input autofocus="autofocus" class="form-control" type="text" name="responsable" id="responsable" /></br></br>
+         <input autofocus="autofocus" required="required" class="form-control" type="text" name="responsable" id="responsable" /></br></br>
 
          <label for="adress">Adresse du laboratoire: </label>
-         <input autofocus="autofocus" class="form-control" type="text" name="adress" id="adress" /></br></br>
+         <input autofocus="autofocus" required="required" class="form-control" type="text" name="adress" id="adress" /></br></br>
 
          <label for="phone">Numéro de téléphone: </label>
-         <input autofocus="autofocus" class="form-control" type="tel" name="phone" id="phone" /></br></br>
+         <input autofocus="autofocus" required="required" class="form-control" type="tel" name="phone" id="phone" /></br></br>
 
-         <label for="nbTest">Nombre de tests: </label>
-         <input autofocus="autofocus" class="form-control" type="number" name="nbTest" id="nbTest" /></br></br>
+         <label for="y">Nombre de tests: </label>
+         <input autofocus="autofocus" required="required" class="form-control" type="number" name="y" id="y" /></br></br>
 
        <button name="commit" class="btn btn-block btn-lg btn-success"><span class="glyphicon glyphicon-check"></span> Valider</button>
    </fieldset>

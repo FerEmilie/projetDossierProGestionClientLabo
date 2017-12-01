@@ -1,7 +1,6 @@
 $(function(){
-      console.log('dataStat');
-$.getJSON('http://127.0.0.1:8000/jsonStat', function(dataStat){
-  console.log(dataStat);
+$('.datahide').hide();
+var recup = $('.datahide').text();
 
    Highcharts.chart('containerStat', {
      chart: {
@@ -11,7 +10,7 @@ $.getJSON('http://127.0.0.1:8000/jsonStat', function(dataStat){
          type: 'pie'
      },
      title: {
-         text: 'Données clients/utilisation automate'
+         text: 'Données clients par utilisation automate'
      },
      tooltip: {
          pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -29,7 +28,10 @@ $.getJSON('http://127.0.0.1:8000/jsonStat', function(dataStat){
              }
          }
      },
-     series: JSON.parse(dataStat)
+     series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: JSON.parse(recup)
+      }]
  });
  });
-  });

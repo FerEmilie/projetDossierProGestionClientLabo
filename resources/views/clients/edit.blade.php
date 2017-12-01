@@ -22,8 +22,8 @@
          <label for="phone">Numéro de téléphone: </label>
          <input class="form-control" type="tel" name="phone" id="phone" value="{{ $client->phone }}" /></br></br>
 
-         <label for="nbTest">Nombre de tests: </label>
-         <input class="form-control" type="number" name="nbTest" id="nbTest" value="{{ $client->nbTest }}"/></br></br>
+         <label for="y">Nombre de tests: </label>
+         <input class="form-control" type="number" name="y" id="y" value="{{ $client->y }}"/></br></br>
 
        <button name="commit" class="btn btn-block btn-lg btn-success"><span class="glyphicon glyphicon-check"></span> Valider</button>
    </fieldset>

@@ -17,8 +17,8 @@
             <input autofocus="autofocus" class="form-control" type="text" name="name" id="name" />
           </div>
           <div class="form-group">
-          <label for="nbTest">Par Nombre de tests: </label>
-          <input class="form-control" type="number" name="nbTest" id="nbTest" />
+          <label for="y">Par Nombre de tests: </label>
+          <input class="form-control" type="number" name="y" id="y" />
           </div>
           <button name="commit" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-check"></span> Valider</button></br></br>
       </fieldset>
@@ -55,7 +55,7 @@
           <td>{{ $client->responsable }}</td>
           <td>{{ $client->adress }}</td>
           <td>{{ $client->phone }}</td>
-          <td>{{ $client->nbTest }}</td>
+          <td>{{ $client->y }}</td>
           <td><a href="/show/{{ $client->id }}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
           <td><a href="/edit/{{ $client->id }}"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
           <td><a href="/delete/{{ $client->id }}" class="alert-link"><i id="alert" class="fa fa-trash-o" aria-hidden="true"></i></a></td>

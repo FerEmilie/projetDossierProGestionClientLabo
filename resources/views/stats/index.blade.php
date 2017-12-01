@@ -5,7 +5,7 @@
 
     </div>
     <div class="datahide">
-      {{$clients}}
+      <p>{{$clients}}</p>
     </div>
 
   @endsection

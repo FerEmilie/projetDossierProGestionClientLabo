@@ -29,7 +29,6 @@ Route::get('/show/materiel/{id}', 'MaterielController@show');
 Route::post('/search/materiel', 'MaterielController@search');
 
 Route::get('/stats', 'StatController@index');
-Route::get('/json', 'StatController@jsonStat');
 
 Auth::routes();
 

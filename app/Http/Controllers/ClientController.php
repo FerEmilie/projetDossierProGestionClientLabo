@@ -50,14 +50,14 @@ class ClientController extends Controller
           'responsable' => 'required|max:45',
           'adress' => 'required|max:255',
           'phone' => 'required|max:10',
-          'nbTest' => 'required|max:11',
+          'y' => 'required|max:11',
       ]);
       $client = new Client();
       $client->name = $request->input('name');
       $client->responsable = $request->input('responsable');
       $client->adress = $request->input('adress');
       $client->phone = $request->input('phone');
-      $client->nbTest = $request->input('nbTest');
+      $client->y = $request->input('y');
       $client->save();
 
       return redirect('/');
@@ -77,7 +77,7 @@ class ClientController extends Controller
     $client->responsable = $request->input('responsable');
     $client->adress = $request->input('adress');
     $client->phone = $request->input('phone');
-    $client->nbTest = $request->input('nbTest');
+    $client->y = $request->input('y');
     $client->save();
 
     return redirect('/');
@@ -123,7 +123,7 @@ class ClientController extends Controller
           }
 
           public function exportExcel(){
-            $clients = Client::select('name', 'responsable', 'adress', 'phone', 'nbTest')->get();
+            $clients = Client::select('name', 'responsable', 'adress', 'phone', 'y')->get();
             $clientsArray = [];
             $clientsArray[] = ['name', 'responsable', 'adress', 'phone', 'nbTest'];
             foreach ($clients as $client) {
