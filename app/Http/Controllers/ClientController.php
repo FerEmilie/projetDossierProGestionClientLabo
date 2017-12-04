@@ -122,23 +122,4 @@ class ClientController extends Controller
 
           }
 
-          public function exportExcel(){
-            $clients = Client::select('name', 'responsable', 'adress', 'phone', 'y')->get();
-            $clientsArray = [];
-            $clientsArray[] = ['name', 'responsable', 'adress', 'phone', 'nbTest'];
-            foreach ($clients as $client) {
-                 $clientsArray[] = $client->toArray();
-             }
-
-             Excel::create('clients', function($excel) use ($clientsArray) {
-                 $excel->setTitle('Clients');
-                 $excel->setDescription('clients file');
-
-                 $excel->sheet('sheet1', function($sheet) use ($clientsArray) {
-                     $sheet->fromArray($clientsArray, null, 'A1', false, false);
-                 });
-
-             })->export('xls');
-          }
-
 }

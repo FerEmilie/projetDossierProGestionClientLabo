@@ -11,6 +11,7 @@
 |
 */
 
+//route ClientController
 Route::get('/', 'ClientController@index');
 Route::get('/liste', 'ClientController@liste');
 Route::get('/show/{id}', 'ClientController@show');
@@ -22,19 +23,20 @@ Route::get('/delete/{id}', 'ClientController@delete');
 Route::get('/materiel', 'ClientController@ajoutmateriel');
 Route::post('/savemateriel', 'ClientController@savemateriel');
 Route::post('/search', 'ClientController@search');
-Route::get('/export', 'ClientController@exportExcel');
-
+//route excel
+Route::get('/export', 'ExcelController@exportExcel');
+Route::get('importExport', 'ExcelController@importExport');
+Route::get('downloadExcel/{type}', 'ExcelController@downloadExcel');
+Route::post('importExcel', 'ExcelController@importExcel');
+//route MaterielController
 Route::get('/liste/materiel', 'MaterielController@liste');
 Route::get('/show/materiel/{id}', 'MaterielController@show');
 Route::post('/search/materiel', 'MaterielController@search');
-
+//route StatController
 Route::get('/stats', 'StatController@index');
-
+//route authentification
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
+//route admin voyager
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
