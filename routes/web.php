@@ -24,7 +24,6 @@ Route::get('/materiel', 'ClientController@ajoutmateriel');
 Route::post('/savemateriel', 'ClientController@savemateriel');
 Route::post('/search', 'ClientController@search');
 //route excel
-Route::get('/export', 'ExcelController@exportExcel');
 Route::get('importExport', 'ExcelController@importExport');
 Route::get('downloadExcel/{type}', 'ExcelController@downloadExcel');
 Route::post('importExcel', 'ExcelController@importExcel');
