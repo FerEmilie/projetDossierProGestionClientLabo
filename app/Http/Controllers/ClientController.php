@@ -18,7 +18,10 @@ class ClientController extends Controller
         return view('clients.index');
     }
 
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function liste()
   {
