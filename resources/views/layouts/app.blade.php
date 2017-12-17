@@ -12,7 +12,8 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
 </head>
 <body>
     <div class="container">
@@ -45,10 +46,10 @@
                         @else
                          <ul class="nav navbar-nav">
                           <li class="active"> <a href="/">Accueil</a> </li>
-                          <li> <a href="/stats">Stats</a> </li>
+                          <li> <a href="/stats">Statistiques</a> </li>
                           <li class="dropdown">
                             <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                              Data <span class="caret"></span>
+                              Données <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <li><a class="dropdown-item" href="/liste">Liste des clients</a></li>
@@ -58,7 +59,7 @@
                           </li>
                           <li class="dropdown">
                             <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                              Create  <span class="caret"></span>
+                              Création  <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <li><a class="dropdown-item" href="/create">Nouveau client</a></li>
@@ -153,8 +154,8 @@
 </div>
 
     <!-- Scripts -->
-    <script src="/js/highcharts.js" type="text/javascript"></script>
-    <script src="/js/app.js" type="text/javascript"></script>
+    <script src="js/highcharts.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
 
 </body>
 </html>

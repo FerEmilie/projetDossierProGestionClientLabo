@@ -5,6 +5,7 @@
 <div class="col-lg-offset-2 col-lg-8 jumbotron">
   <h1>Accueil</h1>
   <p>{{ date('D j \of M Y - \w\e\e\k \n\° W') }}</p>
+    <p>Bienvenue sur votre gestionnaire de clients</p>
 </div>
 
 <div class="col-lg-offset-1 col-lg-8">
