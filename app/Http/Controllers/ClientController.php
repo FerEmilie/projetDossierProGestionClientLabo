@@ -31,11 +31,11 @@ class ClientController extends Controller
       return view('clients.liste', ['clients' => $clients, 'materiels' => $materiels, 'i' => $i]);
   }
 
-    public function show($id)
+    public function showClient($id)
     {
       $client = Client::find($id);
       $i = 1;
-      return view('clients.show', ['client' => $client, 'i' => $i]);
+      return view('clients.showClient', ['client' => $client, 'i' => $i]);
     }
 
     public function create()

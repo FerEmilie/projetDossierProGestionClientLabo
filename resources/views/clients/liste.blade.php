@@ -56,7 +56,7 @@
           <td>{{ $client->adress }}</td>
           <td>{{ $client->phone }}</td>
           <td>{{ $client->y }}</td>
-          <td><a href="/show/{{ $client->id }}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
+          <td><a href="/showClient/{{ $client->id }}"><i class="fa fa-eye" aria-hidden="true"></i></a></td>
           <td><a href="/edit/{{ $client->id }}"><i class="fa fa-wrench" aria-hidden="true"></i></a></td>
           <td><a href="/delete/{{ $client->id }}" class="alert-link"><i id="alert" class="fa fa-trash-o" aria-hidden="true"></i></a></td>
       </tr>

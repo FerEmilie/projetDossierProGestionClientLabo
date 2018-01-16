@@ -14,7 +14,7 @@
 //route ClientController
 Route::get('/', 'ClientController@index');
 Route::get('liste', 'ClientController@liste');
-Route::get('show/{id}', 'ClientController@show');
+Route::get('showClient/{id}', 'ClientController@showClient');
 Route::get('create', 'ClientController@create');
 Route::post('save', 'ClientController@save');
 Route::get('edit/{id}', 'ClientController@edit');
