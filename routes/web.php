@@ -28,9 +28,9 @@ Route::get('importExport', 'ExcelController@importExport');
 Route::get('downloadExcel/{type}', 'ExcelController@downloadExcel');
 Route::post('importExcel', 'ExcelController@importExcel');
 //route MaterielController
-Route::get('liste/materiel', 'MaterielController@liste');
+Route::get('listeMateriel', 'MaterielController@liste');
 Route::get('show/materiel/{id}', 'MaterielController@show');
-Route::post('search/materiel', 'MaterielController@search');
+Route::post('searchMateriel', 'MaterielController@search');
 //route StatController
 Route::get('stats', 'StatController@index');
 //route authentification

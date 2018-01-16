@@ -746,7 +746,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(8);
-module.exports = __webpack_require__(37);
+module.exports = __webpack_require__(36);
 
 
 /***/ }),
@@ -31718,8 +31718,7 @@ $(function () {
 });
 
 /***/ }),
-/* 36 */,
-/* 37 */
+/* 36 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

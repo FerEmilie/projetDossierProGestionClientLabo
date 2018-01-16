@@ -53,7 +53,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <li><a class="dropdown-item" href="/liste">Liste des clients</a></li>
-                              <li><a class="dropdown-item" href="/liste/materiel">Liste des matériels</a></li>
+                              <li><a class="dropdown-item" href="/listeMateriel">Liste des matériels</a></li>
                               <li><a class="dropdown-item" href="/importExport">Export Import Excel Clients</a></li>
                             </ul>
                           </li>

@@ -8,7 +8,7 @@
   </div>
 <div class="row">
   <div class="col-lg-2 jumbotron">
-    <form id="form" class="" action="/search/materiel" method="post">
+    <form id="form" class="" action="/searchMateriel" method="post">
       <fieldset>
           <legend>Recherche matériels</legend>
             {{ csrf_field() }}
