@@ -113,9 +113,13 @@ class ClientController extends Controller
           {
 
             $i = 1;
+            var_dump($request);
             $input = $request->all();
+            var_dump($input);
             $shift = array_shift($input);
+            var_dump($input);
             $filtre = array_filter($input);
+            var_dump($filtre);
             $clients = Client::where($filtre)->get();
 
             return view('clients.liste', ['clients' => $clients, 'i' => $i]);
